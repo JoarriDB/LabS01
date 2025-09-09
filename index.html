@@ -183,6 +183,216 @@
         background: linear-gradient(to top, rgba(120, 60, 180, 0.9), transparent);
     }
 
+    /* Pricing Section */
+    .pricing-section {
+        background-color: #f8f9fa;
+        padding: 4rem 0;
+        margin-top: 4rem;
+    }
+
+    .pricing-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #1e2a3a;
+        margin-bottom: 1rem;
+        font-weight: 300;
+    }
+
+    .pricing-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 3rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .pricing-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2.5rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    .pricing-card.featured {
+        border: 2px solid #00a0e6;
+        transform: scale(1.05);
+    }
+
+    .pricing-card.featured::before {
+        content: "POPULAR";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #00a0e6;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .plan-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .plan-name {
+        font-size: 1.5rem;
+        color: #1e2a3a;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .plan-subtitle {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 1rem;
+    }
+
+    .plan-target {
+        font-size: 0.9rem;
+        color: #888;
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+
+    .plan-price {
+        font-size: 2.5rem;
+        color: #1e2a3a;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .plan-price.custom {
+        font-size: 1.5rem;
+    }
+
+    .plan-period {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    .plan-features {
+        list-style: none;
+        margin: 2rem 0;
+    }
+
+    .plan-features li {
+        padding: 0.5rem 0;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    .plan-features li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #00a0e6;
+        font-weight: bold;
+    }
+
+    .plan-button {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .plan-button.primary {
+        background-color: #00a0e6;
+        color: white;
+    }
+
+    .plan-button.primary:hover {
+        background-color: #0088cc;
+    }
+
+    .plan-button.secondary {
+        background-color: transparent;
+        color: #1e2a3a;
+        border: 2px solid #1e2a3a;
+    }
+
+    .plan-button.secondary:hover {
+        background-color: #1e2a3a;
+        color: white;
+    }
+
+    /* Footer */
+    .footer {
+        background-color: #1e2a3a;
+        color: white;
+        padding: 3rem 0 2rem;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .footer-column ul {
+        list-style: none;
+    }
+
+    .footer-column li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-column a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-column a:hover {
+        color: #00a0e6;
+    }
+
+    .footer-column a.external::after {
+        content: " ↗";
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid #444;
+        color: #ccc;
+    }
+
     /* Accessibility */
     .accessibility-button {
         position: fixed;
@@ -225,7 +435,9 @@
     <!-- Header -->
     <header class="header">
         <div class="nav-container">
-            <div class="logo">GE</div>
+            <div class="logo">
+                <img src="https://logos-world.net/wp-content/uploads/2021/08/GE-General-Electric-Logo.png" alt="GE Logo" style="width: 100px; height: 100px; object-fit: contain;">
+            </div>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#about">About us</a></li>
@@ -277,8 +489,114 @@
                 </div>
             </div>
         </div>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section">
+            <h2 class="pricing-title">Servicio de monitoreo de maquinaria industrial</h2>
+            <p class="pricing-subtitle">Soluciones inteligentes para el mantenimiento predictivo de sus activos industriales</p>
+            
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Starter</h3>
+                        <p class="plan-subtitle">Plan Free</p>
+                        <p class="plan-target">👤 Para usuarios que quieren probar el servicio o empresas muy pequeñas</p>
+                        <div class="plan-price">Gratis</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Monitoreo de hasta 3 máquinas</li>
+                        <li>Dashboard básico en la nube</li>
+                        <li>Reportes mensuales de estado general</li>
+                        <li>No incluye métricas predictivas</li>
+                        <li>No incluye alertas avanzadas</li>
+                    </ul>
+                    <button class="plan-button secondary">Comenzar gratis</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card featured">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Pro</h3>
+                        <p class="plan-subtitle">Plan Small Business</p>
+                        <p class="plan-target">👤 Para pequeñas y medianas empresas</p>
+                        <div class="plan-price">$150<span class="plan-period">/mes</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Monitoreo de hasta 50 activos industriales</li>
+                        <li>Alertas en tiempo real de fallas</li>
+                        <li>Reportes semanales y analítica avanzada</li>
+                        <li>Métricas predictivas incluidas</li>
+                        <li>Acceso a API para integración (ERP, MES)</li>
+                        <li>Soporte estándar</li>
+                    </ul>
+                    <button class="plan-button primary">Empezar ahora</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <p class="plan-subtitle">Plan Enterprise</p>
+                        <p class="plan-target">👤 Para grandes corporaciones (aerolíneas, utilities, grandes fábricas)</p>
+                        <div class="plan-price custom">Precio personalizado</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Monitoreo ilimitado de activos</li>
+                        <li>Soluciones personalizadas de IA</li>
+                        <li>Digital twins avanzados</li>
+                        <li>Integración total con sistemas empresariales</li>
+                        <li>Soporte 24/7 con equipo dedicado</li>
+                        <li>Consultoría especializada</li>
+                    </ul>
+                    <button class="plan-button secondary">Contáctanos</button>
+                </div>
+            </div>
+        </section>
     </div>
 </main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Empresas</h4>
+            <ul>
+                <li><a href="#" class="external">GE Aerospace</a></li>
+                <li><a href="#" class="external">GE HealthCare</a></li>
+                <li><a href="#" class="external">GE Vernova</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Recursos</h4>
+            <ul>
+                <li><a href="#">Spinoff resources</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">ESG Reports</a></li>
+                <li><a href="#" class="external">Global Impact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#" class="external">Accessibility</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Soporte</h4>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="external">Cookies</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 General Electric Company</p>
+    </div>
+</footer>
 
 <!-- Accessibility Button -->
 <button class="accessibility-button" title="Accessibility Options">
@@ -302,11 +620,20 @@
         alert('Accessibility options would be displayed here');
     });
 
-    // Mobile menu toggle (placeholder)
-    window.addEventListener('resize', function() {
-        if (window.innerWidth <= 768) {
-            console.log('Mobile view activated');
-        }
+    // Pricing card interactions
+    document.querySelectorAll('.plan-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.pricing-card');
+            const planName = card.querySelector('.plan-name').textContent;
+            
+            if (this.textContent === 'Contáctanos') {
+                alert(`Formulario de contacto para el plan ${planName} - En desarrollo`);
+            } else if (this.textContent === 'Comenzar gratis') {
+                alert(`Registro gratuito para el plan ${planName} - En desarrollo`);
+            } else {
+                alert(`Proceso de suscripción para el plan ${planName} - En desarrollo`);
+            }
+        });
     });
 </script>
 ```
